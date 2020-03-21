@@ -1,4 +1,4 @@
-<!--# Givens_VBA_challenge -->
+<!-- # Givens_VBA_challenge -->
 # VBA Homework - The VBA of Wall Street
 
 ## Objective
@@ -34,7 +34,7 @@ Analyze three years (2014-2016) of stock market data from .xlsx document utilizi
   * The total stock volume of the stock.
 
 # 'Declare all variables to loop through
-<!-- Dim ws As Worksheet
+#<!-- Dim ws As Worksheet
 Dim ticker As String
 Dim vol As Integer
 Dim year_open As Double
@@ -43,7 +43,7 @@ Dim yearly_change As Double
 Dim percent_change As Double
 Dim Summary_Table_Row As Integer -->
 
-<!-- 'Ran into overflow error, found below statement on StackOverflow
+#<!-- 'Ran into overflow error, found below statement on StackOverflow
 On Error Resume Next
 
 'Start For loop to run through each worksheet one at a time
@@ -90,7 +90,7 @@ For Each ws In ThisWorkbook.Worksheets
     
 ws.Columns("K").NumberFormat = "0.00%" -->
 
-<!-- 
+# <!-- 
 * You should also have conditional formatting that will highlight positive change in green and negative change in red.
 
     'Declare the format for columns colors
