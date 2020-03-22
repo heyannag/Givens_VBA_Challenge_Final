@@ -33,29 +33,29 @@ Analyze three years (2014-2016) of stock market data from .xlsx document utilizi
 
   * The total stock volume of the stock.
 
-# Declare all variables to loop through
-  Dim ws As Worksheet
-  Dim ticker As String
-  Dim vol As Integer
-  Dim year_open As Double
-  Dim year_close As Double
-  Dim yearly_change As Double
-  Dim percent_change As Double
-  Dim Summary_Table_Row As Integer
+  ' Declare all variables to loop through
+    Dim ws As Worksheet
+    Dim ticker As String
+    Dim vol As Integer
+    Dim year_open As Double
+    Dim year_close As Double
+    Dim yearly_change As Double
+    Dim percent_change As Double
+    Dim Summary_Table_Row As Integer
 
-  'Ran into overflow error, found below statement on StackOverflow
-  On Error Resume Next
+    'Ran into overflow error, found below statement on StackOverflow
+    On Error Resume Next
 
-  'Start For loop to run through each worksheet one at a time
-    For Each ws In ThisWorkbook.Worksheets
-      'Set all headers in row 1 to name the data we are about to summarize
-      ws.Cells(1, 9).Value = "Ticker"
-      ws.Cells(1, 10).Value = "Yearly Change"
-      ws.Cells(1, 11).Value = "Percent Change"
-      ws.Cells(1, 12).Value = "Total Stock Volume"
+    'Start For loop to run through each worksheet one at a time
+      For Each ws In ThisWorkbook.Worksheets
+        'Set all headers in row 1 to name the data we are about to summarize
+        ws.Cells(1, 9).Value = "Ticker"
+        ws.Cells(1, 10).Value = "Yearly Change"
+        ws.Cells(1, 11).Value = "Percent Change"
+        ws.Cells(1, 12).Value = "Total Stock Volume"
 
-  'Setup where the summary table is going to be inputting in row 2
-    Summary_Table_Row = 2
+    'Setup where the summary table is going to be inputting in row 2
+      Summary_Table_Row = 2
 
     'Begin For loop to start sorting through data
         For i = 2 To ws.UsedRange.Rows.Count
